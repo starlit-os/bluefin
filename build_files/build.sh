@@ -8,7 +8,7 @@ mkdir -p /var/opt
 ### Install packages
 
 dnf -y copr enable gvalkov/vicinae
-dnf -y config-manager setopt terra.enabled=1
+dnf -y config-manager setopt rpmfusion*.enabled=1 terra.enabled=1
 
 dnf -y install \
 	coolercontrol \
@@ -19,6 +19,10 @@ dnf -y install \
     https://vencord.dev/download/vesktop/amd64/rpm \
     vicinae \
     warp-terminal
+
+dnf -y copr disable gvalkov/vicinae
+dnf -y config-manager setopt rpmfusion*.enabled=0 terra.enabled=0 warpdotdev.enabled=0
+
 
 ### Move opt stuff
 rm /usr/bin/warp-terminal
