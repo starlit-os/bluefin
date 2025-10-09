@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+#MISE description="Build Bluefin image"
+#USAGE flag "-i --image <target>" help="Name of the target image to build"
+#USAGE flag "-t --tag <tag>" help="Tag to apply to the built image"
+
+echo "Building Bluefin image..."
+podman build \
+    "${BUILD_ARGS[@]}" \
+    --pull=newer \
+    --tag "${usage_target:-bluefin-dx}:${usage_tag:-latest}" \
+    .
