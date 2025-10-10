@@ -48,7 +48,7 @@ jobs:
 
       - name: Cache Container Images
         id: cache-container-images
-        uses: jamesmortensen/cache-container-images-action@v1
+        uses: jamesmortensen/cache-container-images-action@v1.0.1
         with:
           images: |
             ghcr.io/ublue-os/bluefin:latest
