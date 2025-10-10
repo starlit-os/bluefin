@@ -46,6 +46,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
 
+      - name: Cache Container Images
+        id: cache-container-images
+        uses: jamesmortensen/cache-container-images-action@v1
+        with:
+          images: |
+            ghcr.io/ublue-os/bluefin:latest
+
       - name: Get current date
         id: date
         run: |
