@@ -14,7 +14,7 @@
     {
       "automerge": true,
       "matchUpdateTypes": ["digest", "pinDigest", "pin"],
-      "matchDepNames": ["ghcr.io/ublue-os/bluefin"],
+      "matchDepNames": ["ghcr.io/ublue-os/bluefin-dx"],
     },
     {
       "enabled": false,
