@@ -24,7 +24,5 @@ mv /var/opt /usr/share/factory/var/opt
 systemctl enable podman.socket
 systemctl enable podman-restart.service
 
-###
-authselect current
-
-### Clean up if needed
+### Configure authentication
+authselect select sssd with-pam-u2f with-silent-lastlog with-mdns4
