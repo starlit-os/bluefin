@@ -8,14 +8,14 @@ mkdir -p /var/opt
 ### Install packages
 
 #dnf -y copr enable gvalkov/vicinae
-dnf -y copr enable pgdev/ghostty 
+dnf -y copr enable scottames/ghostty
 
 dnf -y install \
     ghostty
 #    vicinae
 
 #dnf -y copr disable gvalkov/vicinae
-dnf -y copr disable pgdev/ghostty
+dnf -y copr disable scottames/ghostty
 
 ### Move opt stuff
 mv /var/opt /usr/share/factory/var/opt
